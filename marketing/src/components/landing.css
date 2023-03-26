@@ -1,0 +1,36 @@
+.no-decoration {
+    text-decoration: none;
+}
+
+.icon {
+    margin-right: 5px;
+}
+
+.heroContent {
+    background-color: #303f9f;
+    padding: 8px 0px 6px;
+    margin-bottom: 20px;
+}
+
+.heroButtons {
+    margin-top: 4px;
+}
+
+.cardGrid {
+    padding-top: 8px;
+    padding-bottom: 8px
+}
+
+.card {
+    height: '100%';
+    display: flex;
+    flex-direction: column
+}
+
+.cardMedia {
+    padding-top: 56.25%;
+}
+
+.cardContent {
+    flex-grow: 1
+}
