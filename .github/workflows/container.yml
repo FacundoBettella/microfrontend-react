@@ -22,7 +22,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+
+      - name: Install Dependencies
       - run: npm install
+
+      - name: Build App
       - run: npm run build
 
       - uses: shinyinc/action-aws-cli@v1.2
