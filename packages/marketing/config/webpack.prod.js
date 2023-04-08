@@ -21,6 +21,7 @@ const prodConfig = {
       exposes: {
         "./MarketingApp": "./src/bootstrap",
       },
+      // If you want just one or two single JS files loaded on browser you could coment the following line; ; but you will avoid these advantages
       shared: packageJson.dependencies,
     }),
   ],
