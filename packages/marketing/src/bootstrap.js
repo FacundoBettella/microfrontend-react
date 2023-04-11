@@ -1,23 +1,19 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { createMemoryHistory } from "history";
 import { App } from "./App";
 
+let root;
+
 // Mount function to start up the app
-const mount = (htmlRootElement) => {
+const mount = (htmlRootElement, { onNavigate }) => {
+  // Verificar si ya se ha creado un objeto root para el contenedor
+  if (!root) {
+    // Si no existe, crear un nuevo objeto root utilizando createRoot
+    root = createRoot(htmlRootElement);
+  }
 
-  /* 
-  createMemoryHistory() => es una función que se utiliza en la biblioteca history para crear un objeto de historial basado en la memoria en lugar de la barra de direcciones del navegador. Este objeto de historial se almacena en la memoria de la aplicación y no está vinculado a la URL en la barra de direcciones del navegador.
-  */
-  const history = createMemoryHistory();
-
-  const root = createRoot(htmlRootElement);
-
-  root.render(
-    <React.StrictMode>
-      <App history={history}/>
-    </React.StrictMode>
-  );
+  // Renderizar el componente raíz de la aplicación en el objeto root
+  root.render(<App onNavigate={onNavigate} />);
 };
 
 // if we are in development and in isolation call mount fn immediately

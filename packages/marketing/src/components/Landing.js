@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 import {
   Container,
   Button,
@@ -14,7 +14,6 @@ import {
 import "./landing.css";
 
 function Copyright() {
-
   return (
     <Typography variant='body2' color='white' align='center'>
       {"Copyright © "}
@@ -30,6 +29,8 @@ function Copyright() {
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export const Landing = () => {
+  const navigate = useNavigate();
+
   return (
     <Fragment>
       <main>
@@ -64,30 +65,22 @@ export const Landing = () => {
                 }}
               >
                 <Grid item>
-                  <RouterLink to='/pricing' className='marketing-no-decoration'>
-                    <Button
-                      variant='contained'
-                      sx={{
-                        color: "white",
-                        backgroundColor: "#5369fb67",
-                      }}
-                    >
-                      Pricing
-                    </Button>
-                  </RouterLink>
+                  <Button
+                    variant='contained'
+                    sx={{
+                      color: "white",
+                      backgroundColor: "#5369fb67",
+                    }}
+                    onClick={() => navigate("/pricing")}
+                  >
+                    Pricing
+                  </Button>
                 </Grid>
-                <Grid item>
+                {/* <Grid item>
                   <RouterLink to='/pricing' className='marketing-no-decoration'>
-                    <Button
-                      sx={{
-                        color: "white",
-                        backgroundColor: "#5369fb67",
-                      }}
-                    >
-                      Pricing
-                    </Button>
+                    Pricing
                   </RouterLink>
-                </Grid>
+                </Grid> */}
               </Grid>
             </div>
           </Container>
