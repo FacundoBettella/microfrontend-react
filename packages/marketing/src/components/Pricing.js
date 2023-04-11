@@ -102,7 +102,7 @@ const footers = [
 export const Pricing = () => {
   return (
     <React.Fragment>
-      <Container component='main' className='heroContent'>
+      <Container component='main' className='marketing-heroContent'>
         <Typography
           component='h1'
           variant='h2'
@@ -142,9 +142,9 @@ export const Pricing = () => {
                   titleTypographyProps={{ align: "center" }}
                   subheaderTypographyProps={{ align: "center" }}
                   action={tier.title === "Pro" ? <StarIcon /> : null}
-                  className='cardHeader'
+                  className='marketing-cardHeader'
                 />
-                <CardContent className='cardPricing'>
+                <CardContent className='marketing-cardPricing'>
                   <div>
                     <Typography component='h2' variant='h3' color='textPrimary'>
                       ${tier.price}
@@ -182,21 +182,21 @@ export const Pricing = () => {
         </Grid>
       </Container>
       {/* Footer */}
-      <Container maxWidth='md' component='footer' className='footer'>
+      <Container maxWidth='md' component='footer' className='marketing-footer'>
         <Grid container spacing={4} justify='space-evenly'>
           {footers.map((footer) => (
             <Grid item xs={6} sm={3} key={footer.title}>
               <Typography variant='h6' color='textPrimary' gutterBottom>
                 {footer.title}
               </Typography>
-              <ul>
+              <ul className="marketing-ul">
                 {footer.description.map((item) => (
                   <li key={item}>
                     <Link
                       href='#'
                       variant='subtitle1'
                       color='textSecondary'
-                      className='link'
+                      className='marketing-link'
                     >
                       {item}
                     </Link>

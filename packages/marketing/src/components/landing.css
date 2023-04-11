@@ -1,36 +1,36 @@
-.no-decoration {
+.marketing-no-decoration {
     text-decoration: none;
 }
 
-.icon {
+.marketing-icon {
     margin-right: 5px;
 }
 
-.heroContent {
+.marketing-heroContent {
     background-color: #303f9f;
     padding: 8px 0px 6px;
     margin-bottom: 20px;
 }
 
-.heroButtons {
+.marketing-heroButtons {
     margin-top: 4px;
 }
 
-.cardGrid {
+.marketing-cardGrid {
     padding-top: 8px;
     padding-bottom: 8px
 }
 
-.card {
+.marketing-card {
     height: '100%';
     display: flex;
     flex-direction: column
 }
 
-.cardMedia {
+.marketing-cardMedia {
     padding-top: 56.25%;
 }
 
-.cardContent {
+.marketing-cardContent {
     flex-grow: 1
 }

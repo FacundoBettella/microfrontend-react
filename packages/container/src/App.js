@@ -1,12 +1,13 @@
-import React, { Fragment } from "react";
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import Header from "./components/Header";
 import { MarketingApp } from "./components/MarketingApp";
 
 export const App = () => {
   return (
-    <Fragment>
-      <h2>We are at the container repository of my microfrontend</h2>
-      <hr />
-      <MarketingApp />
-    </Fragment>
+    <BrowserRouter>
+        <Header />
+        <MarketingApp />
+    </BrowserRouter>
   );
 };

@@ -11,10 +11,10 @@ import {
   Link,
   CardMedia,
 } from "@mui/material";
-
 import "./landing.css";
 
 function Copyright() {
+
   return (
     <Typography variant='body2' color='white' align='center'>
       {"Copyright © "}
@@ -33,7 +33,7 @@ export const Landing = () => {
   return (
     <Fragment>
       <main>
-        <div className='heroContent'>
+        <div className='marketing-heroContent'>
           <Container maxWidth='sm'>
             <Typography
               component='h1'
@@ -54,7 +54,7 @@ export const Landing = () => {
               contents, the creator, etc. Make it short and sweet, but not too
               short so folks don&apos;t simply skip over it entirely.
             </Typography>
-            <div className='heroButtons'>
+            <div className='marketing-heroButtons'>
               <Grid
                 container
                 spacing={2}
@@ -64,7 +64,7 @@ export const Landing = () => {
                 }}
               >
                 <Grid item>
-                  <RouterLink to='/pricing' className='no-decoration'>
+                  <RouterLink to='/pricing' className='marketing-no-decoration'>
                     <Button
                       variant='contained'
                       sx={{
@@ -77,7 +77,7 @@ export const Landing = () => {
                   </RouterLink>
                 </Grid>
                 <Grid item>
-                  <RouterLink to='/pricing' className='no-decoration'>
+                  <RouterLink to='/pricing' className='marketing-no-decoration'>
                     <Button
                       sx={{
                         color: "white",
@@ -97,13 +97,13 @@ export const Landing = () => {
           <Grid container spacing={4}>
             {cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
-                <Card className='card'>
+                <Card className='marketing-card'>
                   <CardMedia
-                    className='cardMedia'
+                    className='marketing-cardMedia'
                     image='https://source.unsplash.com/random'
                     title='Image title'
                   />
-                  <CardContent className='cardContent'>
+                  <CardContent className='marketing-cardContent'>
                     <Typography gutterBottom variant='h5' component='h2'>
                       Heading
                     </Typography>
@@ -124,7 +124,7 @@ export const Landing = () => {
       </main>
 
       {/* Footer */}
-      <footer className='footer'>
+      <footer className='marketing-footer'>
         <Typography
           variant='subtitle1'
           align='center'

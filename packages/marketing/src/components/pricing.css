@@ -1,19 +1,19 @@
-ul {
+.marketing-ul {
     margin: 0;
     padding: 10px;
     list-style: "*";
 }
 
-.link {
+.marketing-link {
     margin: 1px;
 }
 
-.cardHeader {
+.marketing-cardHeader {
     height: 10vh;
     background-color: grey;
 }
 
-.cardPricing {
+.marketing-cardPricing {
     display: flex;
     margin-bottom: 2px;
     justify-items: stretch;
@@ -22,7 +22,7 @@ ul {
 }
 
 
-.footer {
+.marketing-footer {
     background: rgb(158, 158, 158);
     border-top: 10px solid #303f9f;
     margin-top: 20px;
