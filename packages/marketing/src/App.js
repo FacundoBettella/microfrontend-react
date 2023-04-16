@@ -1,28 +1,26 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { createMemoryHistory } from "history";
-import { unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
+
+import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 import { Pricing } from "./components/Pricing";
 import { Landing } from "./components/Landing";
 
-export const App = ({ onNavigate }) => {
-  /* 
-  createMemoryHistory() => es una función que se utiliza en la biblioteca history para crear un objeto de historial basado en la memoria en lugar de la barra de direcciones del navegador. Este objeto de historial se almacena en la memoria de la aplicación y no está vinculado a la URL en la barra de direcciones del navegador.
-  */
-  const history = createMemoryHistory();
+export const App = ({ history }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  history.listen(() => onNavigate(history.location));
+  useEffect(() => {
+    if (history.location.pathname === location.pathname) return;
+    navigate(history.location.pathname);
+  }, [history.location]);
 
   return (
-    <Fragment>
-      <HistoryRouter history={history}>
-        <Routes>
-          <Route path='/pricing' element={<Pricing />} />
-          <Route path='/' element={<Landing />} />
-          <Route path='/*' element={<Landing />} />
-        </Routes>
-      </HistoryRouter>
-    </Fragment>
+    <Routes>
+      <Route path='/' element={<Landing />} />
+      <Route path='/*' element={<Landing />} />
+      <Route path='/pricing' element={<Pricing />} />
+    </Routes>
   );
 };
