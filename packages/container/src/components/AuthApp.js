@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from "react";
-import { mount } from "marketing/MarketingApp";
+import { mount } from "auth/AuthApp";
 import { useLocation, useNavigate } from "react-router-dom";
 
-export const MarketingApp = () => {
+export const AuthApp = () => {
   const ref = useRef(null);
 
   const navigate = useNavigate(); /* Copia del container BrowserRouter  */
@@ -26,7 +26,7 @@ export const MarketingApp = () => {
       {
         onNavigate: ({ pathname: nextPathname }) => {
           const { pathname: containerPath } = location;
-        
+
           if (containerPath !== nextPathname) {
             navigate(nextPathname);
           }

@@ -71,7 +71,7 @@ export const Landing = () => {
                       color: "white",
                       backgroundColor: "#5369fb67",
                     }}
-                    onClick={() => navigate("/pricing")}
+                    onClick={() => navigate("/marketing/pricing")}
                   >
                     Pricing
                   </Button>
